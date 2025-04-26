@@ -8,9 +8,12 @@ preprocessing:
 
   # Text (grapheme) and phoneme symbols, either provide a string or list of strings.
   # Symbols in the dataset will be filtered according to these lists!
-  text_symbols: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùüáéíóúñ'
+  
+  text_symbols: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', \
+                 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', \
+                 'à', 'è', 'ì', 'ò', 'ù', 'ü', 'á', 'é', 'í', 'ó', 'ú', 'ñ']
 
-  phoneme_symbols: ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',\
+  phoneme_symbols: ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', \
                     'n', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', \
                     'æ', 'ç', 'ð', 'ø', 'ŋ', 'œ', 'ɐ', 'ɑ', 'ɔ', 'ə', 'ɛ', 'ɝ', \
                     'ɹ', 'ɡ', 'ɪ', 'ʁ', 'ʃ', 'ʊ', 'ʌ', 'ʏ', 'ʒ', 'ʔ', 'ˈ', 'ˌ', \
@@ -36,13 +39,13 @@ training:
   # Hyperparams for learning rate and scheduler.
   # The scheduler is reducing the lr on plateau of phoneme error rate (tested every n_generate_steps).
 
-  learning_rate: 0.0005              # Learning rate of Adam.
+  learning_rate: 0.0003              # Learning rate of Adam.
   warmup_steps: 4000                 # Linear increase of the lr from zero to the given lr within the given number of steps.
   scheduler_plateau_factor: 0.1      # Factor to multiply learning rate on plateau.
   scheduler_plateau_patience: 10     # Number of text generations with no improvement to tolerate.
   batch_size: 256                    # Training batch size.
   batch_size_val: 256                # Validation batch size.
-  epochs: 100                        # Number of epochs to train.
+  epochs: 50                         # Number of epochs to train.
   generate_steps: 10000              # Interval of training steps to generate sample outputs. Also, at this step the phoneme and word
                                      # error rates are calculated for the scheduler.
   validate_steps: 10000              # Interval of training steps to validate the model
