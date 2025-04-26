@@ -1,6 +1,6 @@
 import unittest
 
-from dp.training.decorators import ignore_exception
+from DeepPhonemizer.dp.training.decorators import ignore_exception
 
 
 @ignore_exception
