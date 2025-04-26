@@ -5,10 +5,10 @@ from typing import List, Tuple, Iterable
 
 import tqdm
 
-from dp.model.model import ModelType
-from dp.preprocessing.text import Preprocessor
-from dp.utils.io import read_config, pickle_binary
-from dp.utils.logging import get_logger
+from DeepPhonemizer.dp.model.model import ModelType
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.utils.io import read_config, pickle_binary
+from DeepPhonemizer.dp.utils.logging import get_logger
 
 logger = get_logger(__name__)
 
