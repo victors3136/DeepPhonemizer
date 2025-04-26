@@ -1,1 +1,1 @@
-from eepPhonemizer.dp.result import Prediction, PhonemizerResult
+from DeepPhonemizer.dp.result import Prediction, PhonemizerResult
