@@ -3,9 +3,9 @@ from pathlib import Path
 import torch
 import torch.multiprocessing as mp
 
-from dp.preprocess import preprocess
-from dp.train import train
-from dp.utils.io import read_config
+from DeepPhonemizer.dp.preprocess import preprocess
+from DeepPhonemizer.dp.train import train
+from DeepPhonemizer.dp.utils.io import read_config
 
 config_file_path = Path('logging.yaml')
 config = read_config(config_file_path)
