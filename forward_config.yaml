@@ -36,13 +36,13 @@ training:
   # Hyperparams for learning rate and scheduler.
   # The scheduler is reducing the lr on plateau of phoneme error rate (tested every n_generate_steps).
 
-  learning_rate: 0.0001              # Learning rate of Adam.
-  warmup_steps: 10000                # Linear increase of the lr from zero to the given lr within the given number of steps.
+  learning_rate: 0.0005              # Learning rate of Adam.
+  warmup_steps: 4000                 # Linear increase of the lr from zero to the given lr within the given number of steps.
   scheduler_plateau_factor: 0.1      # Factor to multiply learning rate on plateau.
   scheduler_plateau_patience: 10     # Number of text generations with no improvement to tolerate.
-  batch_size: 32                     # Training batch size.
-  batch_size_val: 32                 # Validation batch size.
-  epochs: 50                         # Number of epochs to train.
+  batch_size: 256                    # Training batch size.
+  batch_size_val: 256                # Validation batch size.
+  epochs: 100                        # Number of epochs to train.
   generate_steps: 10000              # Interval of training steps to generate sample outputs. Also, at this step the phoneme and word
                                      # error rates are calculated for the scheduler.
   validate_steps: 10000              # Interval of training steps to validate the model
@@ -51,7 +51,12 @@ training:
   n_generate_samples: 10             # Number of result samples to show on tensorboard.
   store_phoneme_dict_in_model: true  # Whether to store the raw phoneme dict in the model.
                                      # It will be loaded by the phonemizer object.
+
+  use_fp16: true
   ddp_backend: 'nccl'                # Backend used by Torch DDP
   ddp_host: 'localhost'              # Hostname used by Torch DDP
-  ddp_post: '12355'                    # Port used by Torch DDP
+  ddp_post: '12355'                  # Port used by Torch DDP
 
+dataloader:
+  num_workers: 4
+  pin_memory: true
