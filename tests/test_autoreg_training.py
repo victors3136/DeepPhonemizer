@@ -7,12 +7,12 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from dp import preprocess
-from dp.model.model import AutoregressiveTransformer
-from dp.model.predictor import Predictor
-from dp.preprocess import preprocess
-from dp.train import train
-from dp.utils.io import read_config, save_config
+from DeepPhonemizer.dp import preprocess
+from DeepPhonemizer.dp.model.model import AutoregressiveTransformer
+from DeepPhonemizer.dp.model.predictor import Predictor
+from DeepPhonemizer.dp.preprocess import preprocess
+from DeepPhonemizer.dp.train import train
+from DeepPhonemizer.dp.utils.io import read_config, save_config
 
 
 class TestAutoregTraining(unittest.TestCase):
