@@ -6,8 +6,8 @@ import torch
 import torch.nn as nn
 from torch.nn import TransformerEncoderLayer, LayerNorm, TransformerEncoder
 
-from dp.model.utils import get_dedup_tokens, _make_len_mask, _generate_square_subsequent_mask, PositionalEncoding
-from dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.model.utils import get_dedup_tokens, _make_len_mask, _generate_square_subsequent_mask, PositionalEncoding
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
 
 
 class ModelType(Enum):
