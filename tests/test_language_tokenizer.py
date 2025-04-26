@@ -1,6 +1,6 @@
 import unittest
 
-from dp.preprocessing.text import LanguageTokenizer
+from DeepPhonemizer.dp.preprocessing.text import LanguageTokenizer
 
 
 class TestLanguageTokenizer(unittest.TestCase):
