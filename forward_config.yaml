@@ -8,8 +8,15 @@ preprocessing:
 
   # Text (grapheme) and phoneme symbols, either provide a string or list of strings.
   # Symbols in the dataset will be filtered according to these lists!
-  text_symbols: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZäöüÄÖÜß'
-  phoneme_symbols: ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'æ', 'ç', 'ð', 'ø', 'ŋ', 'œ', 'ɐ', 'ɑ', 'ɔ', 'ə', 'ɛ', 'ɝ', 'ɹ', 'ɡ', 'ɪ', 'ʁ', 'ʃ', 'ʊ', 'ʌ', 'ʏ', 'ʒ', 'ʔ', 'ˈ', 'ˌ', 'ː', '̃', '̍', '̥', '̩', '̯', '͡', 'θ']
+  text_symbols: 'abcdefghijklmnopqrstuvwxyz'\
+                'ABCDEFGHIJKLMNOPQRSTUVWXYZ'\
+                'àèìòùüáéíóúñ'
+
+  phoneme_symbols: ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',\
+                    'n', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', \
+                    'æ', 'ç', 'ð', 'ø', 'ŋ', 'œ', 'ɐ', 'ɑ', 'ɔ', 'ə', 'ɛ', 'ɝ', \
+                    'ɹ', 'ɡ', 'ɪ', 'ʁ', 'ʃ', 'ʊ', 'ʌ', 'ʏ', 'ʒ', 'ʔ', 'ˈ', 'ˌ', \
+                    'ː', '̃', '̍', '̥', '̩', '̯', '͡', 'θ', 'ɾ', 'ʝ', 'ɲ', 'ʎ']
 
   char_repeats: 3                # Number of grapheme character repeats to allow for mapping to longer phoneme sequences.
                                  # Set to 1 for autoreg_transformer.
@@ -33,11 +40,11 @@ training:
 
   learning_rate: 0.0001              # Learning rate of Adam.
   warmup_steps: 10000                # Linear increase of the lr from zero to the given lr within the given number of steps.
-  scheduler_plateau_factor: 0.5      # Factor to multiply learning rate on plateau.
+  scheduler_plateau_factor: 0.1      # Factor to multiply learning rate on plateau.
   scheduler_plateau_patience: 10     # Number of text generations with no improvement to tolerate.
   batch_size: 32                     # Training batch size.
   batch_size_val: 32                 # Validation batch size.
-  epochs: 30                         # Number of epochs to train.
+  epochs: 50                         # Number of epochs to train.
   generate_steps: 10000              # Interval of training steps to generate sample outputs. Also, at this step the phoneme and word
                                      # error rates are calculated for the scheduler.
   validate_steps: 10000              # Interval of training steps to validate the model
