@@ -10,14 +10,14 @@ from torch.optim import Adam
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.tensorboard import SummaryWriter
 
-from dp.model.model import Model
-from dp.model.utils import _trim_util_stop
-from dp.preprocessing.text import Preprocessor
-from dp.training.dataset import new_dataloader
-from dp.training.decorators import ignore_exception
-from dp.training.losses import CrossEntropyLoss, CTCLoss
-from dp.training.evaluation import evaluate_samples
-from dp.utils.io import to_device, unpickle_binary
+from DeepPhonemizer.dp.model.model import Model
+from DeepPhonemizer.dp.model.utils import _trim_util_stop
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.training.dataset import new_dataloader
+from DeepPhonemizer.dp.training.decorators import ignore_exception
+from DeepPhonemizer.dp.training.losses import CrossEntropyLoss, CTCLoss
+from DeepPhonemizer.dp.training.evaluation import evaluate_samples
+from DeepPhonemizer.dp.utils.io import to_device, unpickle_binary
 
 
 class Trainer:
