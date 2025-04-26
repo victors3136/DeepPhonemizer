@@ -1,6 +1,6 @@
 import unittest
 import torch
-from dp.training.dataset import PhonemizerDataset, collate_dataset
+from DeepPhonemizer.dp.training.dataset import PhonemizerDataset, collate_dataset
 
 
 class TestPhonemizerDataset(unittest.TestCase):
