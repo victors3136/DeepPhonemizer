@@ -1,6 +1,6 @@
 import unittest
 
-from dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
 
 
 class TestPreprocessor(unittest.TestCase):
