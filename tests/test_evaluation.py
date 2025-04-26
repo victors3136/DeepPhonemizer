@@ -1,6 +1,6 @@
 import unittest
 
-from dp.training.evaluation import evaluate_samples
+from DeepPhonemizer.dp.training.evaluation import evaluate_samples
 
 
 class TestEvaluation(unittest.TestCase):
