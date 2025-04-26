@@ -4,9 +4,9 @@ from unittest.mock import patch
 
 import torch
 
-from dp.model.model import Model
-from dp.model.predictor import Predictor
-from dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.model.model import Model
+from DeepPhonemizer.dp.model.predictor import Predictor
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
 
 
 class ModelMock:
