@@ -40,11 +40,11 @@ training:
   # The scheduler is reducing the lr on plateau of phoneme error rate (tested every n_generate_steps).
 
   learning_rate: 0.0003              # Learning rate of Adam.
-  warmup_steps: 4000                 # Linear increase of the lr from zero to the given lr within the given number of steps.
+  warmup_steps: 10000                # Linear increase of the lr from zero to the given lr within the given number of steps.
   scheduler_plateau_factor: 0.1      # Factor to multiply learning rate on plateau.
   scheduler_plateau_patience: 10     # Number of text generations with no improvement to tolerate.
-  batch_size: 256                    # Training batch size.
-  batch_size_val: 256                # Validation batch size.
+  batch_size: 512                    # Training batch size.
+  batch_size_val: 512                # Validation batch size.
   epochs: 50                         # Number of epochs to train.
   generate_steps: 10000              # Interval of training steps to generate sample outputs. Also, at this step the phoneme and word
                                      # error rates are calculated for the scheduler.
