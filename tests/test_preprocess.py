@@ -4,10 +4,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dp import preprocess
-from dp.preprocess import preprocess
-from dp.preprocessing.text import Preprocessor
-from dp.utils.io import read_config, unpickle_binary, save_config
+from DeepPhonemizer.dp import preprocess
+from DeepPhonemizer.dp.preprocess import preprocess
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.utils.io import read_config, unpickle_binary, save_config
 
 
 class TestPreprocess(unittest.TestCase):
