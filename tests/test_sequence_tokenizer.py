@@ -1,6 +1,6 @@
 import unittest
 
-from dp.preprocessing.text import SequenceTokenizer
+from DeepPhonemizer.dp.preprocessing.text import SequenceTokenizer
 
 
 class TestSequenceTokenizer(unittest.TestCase):
