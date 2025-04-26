@@ -8,9 +8,7 @@ preprocessing:
 
   # Text (grapheme) and phoneme symbols, either provide a string or list of strings.
   # Symbols in the dataset will be filtered according to these lists!
-  text_symbols: 'abcdefghijklmnopqrstuvwxyz'\
-                'ABCDEFGHIJKLMNOPQRSTUVWXYZ'\
-                'àèìòùüáéíóúñ'
+  text_symbols: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùüáéíóúñ'
 
   phoneme_symbols: ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',\
                     'n', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', \
