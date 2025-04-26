@@ -4,12 +4,13 @@ from pathlib import Path
 import torch
 from torch.distributed import init_process_group
 
-from dp.model.model import load_checkpoint, ModelType, \
-    create_model
-from dp.preprocessing.text import Preprocessor
-from dp.training.trainer import Trainer
-from dp.utils.io import read_config
-from dp.utils.logging import get_logger
+from DeepPhonemizer.dp.model.model import load_checkpoint, \
+                                          ModelType, \
+                                          create_model
+from DeepPhonemizer.dp.preprocessing.text import Preprocessor
+from DeepPhonemizer.dp.training.trainer import Trainer
+from DeepPhonemizer.dp.utils.io import read_config
+from DeepPhonemizer.dp.utils.logging import get_logger
 
 logger = get_logger(__name__)
 
