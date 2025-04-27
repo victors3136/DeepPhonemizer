@@ -47,8 +47,6 @@ training:
   scheduler_plateau_patience: 5      # Number of text generations with no improvement to tolerate.
   batch_size: 256                    # Training batch size.
   batch_size_val: 256                # Validation batch size.
-    batch_size: 64                   #
-  batch_size_val: 64                 #
   epochs: 300                        #
   generate_steps: 5000               #
   validate_steps: 5000               #
