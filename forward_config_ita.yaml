@@ -6,16 +6,17 @@ preprocessing:
   languages: ['ita']
 
   text_symbols: [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
-    'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-    'u', 'v', 'w', 'x', 'y', 'z', 'à', 'è', 'ì', 'ò', 'ù'
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+    'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y',
+    'z', 'à', 'á', 'è', 'é', 'ì', 'ò', 'ó', 'ù', 'ú'
   ]
 
-  phoneme_symbols: [
-    'a', 'b', 'd', 'e', 'f', 'g', 'i', 'k', 'l', 'm',
-    'n', 'o', 'p', 'r', 's', 't', 'u', 'ʎ', 'ʃ'
+  phoneme_symbols:  [
+    'a', 'b', 'd', 'e', 'f', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+    'p', 'r', 's', 't', 'u', 'v', 'w', 'z', 'ɔ', 'ɛ', 'ɡ', 'ɲ',
+    'ʃ', 'ʎ', 'ʒ'
   ]
-
+  
   char_repeats: 2
   lowercase: true
   n_val: 5000
